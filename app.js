@@ -11,23 +11,23 @@ const PORTFOLIO_DATABASE = [
         artist: "yosoygka (Prod. Botistudio)",
         album: "Sencillos Oficiales / GKA Showcase",
         cover: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80",
-        youtubeId: "QAQdclQr1qY", // Video Oficial Real
+        youtubeId: "QAQdclQr1qY",
         buyUrl: "https://wa.me/56920074803?text=Hola%20GKA,%20me%20interesa%20adquirir%20o%20colaborar%20en%20el%20proyecto%20Sin%20Coincidir",
         duration: "3:10",
         lyrics: [
             { time: 0, text: "🎵 [Yosoygka — Sencillo Oficial 'Sin Coincidir'] 🎵" },
             { time: 5, text: "Voz R&B con compresión cálida de válvulas analógicas en Ondas Studio." },
-            { time: 12, text: "Espacialidad estéreo ampliada mediante micro-delays e imágen psicoacústica." },
+            { time: 12, text: "Espacialidad estéreo ampliada mediante micro-delays e imagen psicoacústica." },
             { time: 18, text: "Producción ejecutada por Botistudio, masterizada en Ondas Studio." }
         ]
     },
     {
         id: "gka-muchostienen",
-        title: "Muchos Tienen Una (Ft. Slash Noise)",
+        title: "Muchos Tienen Una",
         artist: "yosoygka Ft. Slash Noise",
-        album: "Colaboraciones Especiales / Rap",
+        album: "Colaboraciones Especiales",
         cover: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=400&q=80",
-        youtubeId: "_eAqKsbgCYM", // Video Oficial Real
+        youtubeId: "_eAqKsbgCYM",
         buyUrl: "https://wa.me/56920074803?text=Hola%20GKA,%20me%20interesa%20adquirir%20o%20colaborar%20en%20el%20proyecto%20Muchos%20tienen%20una",
         duration: "3:42",
         lyrics: [
@@ -38,35 +38,243 @@ const PORTFOLIO_DATABASE = [
         ]
     },
     {
-        id: "gka-hamparte",
-        title: "Antonio García Villarán (Lofi Beats)",
-        artist: "yosoygka (GKA Beats)",
-        album: "Beats Conceptuales / Lofi Collection",
-        cover: "https://images.unsplash.com/photo-1518173946687-a4c8a383392e?auto=format&fit=crop&w=400&q=80",
-        youtubeId: "OUuuHwHKsYk", // Video Oficial Real (Hamparte Lofi)
-        buyUrl: "https://wa.me/56920074803?text=Hola%20GKA,%20me%20interesa%20el%20beat%20conceptual%20Antonio%20Garcia%20Villaran",
-        duration: "2:18",
-        lyrics: [
-            { time: 0, text: "🎨 [Yosoygka — Instrumental Lofi 'Hamparte'] 🎨" },
-            { time: 5, text: "Estilo Lofi chill melancólico inspirado en el famoso crítico de arte." },
-            { time: 11, text: "Sampleo y texturas clásicas de vinilo con un ritmo relajante." },
-            { time: 17, text: "Licencia de leasing disponible para creadores de contenido y músicos." }
-        ]
-    },
-    {
         id: "gka-relaxpiano",
-        title: "Free Lo-Fi Relax Piano Beat",
+        title: "Relax Piano Beat",
         artist: "yosoygka (GKA Beats)",
         album: "Beats de Distribución Libre",
         cover: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=400&q=80",
-        youtubeId: "k37eDZdaeu4", // Video Oficial Real (Relax Piano Lofi)
+        youtubeId: "k37eDZdaeu4",
         buyUrl: "https://wa.me/56920074803?text=Hola%20GKA,%20me%20interesa%20adquirir%20la%20licencia%20comercial%20de%20Relax%20Piano%20Beat",
         duration: "3:05",
         lyrics: [
             { time: 0, text: "🎹 [Yosoygka — Free Lo-Fi Piano Beat] 🎹" },
             { time: 6, text: "Bases perfectas para relajación, estudio o podcasts." },
-            { time: 12, text: "Teclados rhodes filtrados y batería sutil." },
-            { time: 19, text: "Uso libre para proyectos no comerciales. Cotiza licencia comercial por WhatsApp." }
+            { time: 12, text: "Teclados rhodes filtrados y batería sutil." }
+        ]
+    },
+    {
+        id: "gka-hamparte",
+        title: "Antonio García Villarán (Hamparte)",
+        artist: "yosoygka (GKA Beats)",
+        album: "Beats Conceptuales / Lofi Collection",
+        cover: "https://images.unsplash.com/photo-1518173946687-a4c8a383392e?auto=format&fit=crop&w=400&q=80",
+        youtubeId: "OUuuHwHKsYk",
+        buyUrl: "https://wa.me/56920074803?text=Hola%20GKA,%20me%20interesa%20el%20beat%20conceptual%20Antonio%20Garcia%20Villaran",
+        duration: "2:18",
+        lyrics: [
+            { time: 0, text: "🎨 [Yosoygka — Instrumental Lofi 'Hamparte'] 🎨" },
+            { time: 5, text: "Estilo Lofi chill melancólico inspirado en el famoso crítico de arte." },
+            { time: 11, text: "Sampleo y texturas clásicas de vinilo con un ritmo relajante." }
+        ]
+    },
+    {
+        id: "gka-avelina",
+        title: "Avelina Lésper (Grafiteros)",
+        artist: "yosoygka (GKA Beats)",
+        album: "Lofi Collection / Beats",
+        cover: "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=400&q=80",
+        youtubeId: "SiobxNjKh9k",
+        buyUrl: "https://wa.me/56920074803?text=Hola%20GKA,%20me%20interesa%20el%20beat%20conceptual%20Avelina%20Lesper",
+        duration: "2:40",
+        lyrics: [
+            { time: 0, text: "🎨 [Yosoygka — Avelina Lésper Lofi Beats] 🎨" },
+            { time: 6, text: "Beat con groove clásico dedicado a la crítica y el arte urbano de la calle." }
+        ]
+    },
+    {
+        id: "gka-neruda",
+        title: "Pablo Neruda (Poetas Naturales)",
+        artist: "yosoygka (GKA Beats)",
+        album: "Lofi Collection / Poesía",
+        cover: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=400&q=80",
+        youtubeId: "Tff4XBXo4uk",
+        buyUrl: "https://wa.me/56920074803?text=Hola%20GKA,%20me%20interesa%20el%20beat%20conceptual%20Pablo%20Neruda",
+        duration: "3:15",
+        lyrics: [
+            { time: 0, text: "📝 [Yosoygka — Pablo Neruda Lofi Beats] 📝" },
+            { time: 6, text: "Sampleo poético de la tierra, ambiente melancólico y chill relajante." }
+        ]
+    },
+    {
+        id: "gka-grafitti",
+        title: "Me Gusta el Grafitti",
+        artist: "yosoygka",
+        album: "Sencillos Oficiales / GKA Rap",
+        cover: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=400&q=80",
+        youtubeId: "_z6RMIi5upE",
+        buyUrl: "https://wa.me/56920074803?text=Hola%20GKA,%20me%20interesa%20adquirir%20o%20colaborar%20en%20Me%20Gusta%20el%20Grafitti",
+        duration: "2:50",
+        lyrics: [
+            { time: 0, text: "🎨 [Yosoygka — Sencillo 'Me Gusta el Grafitti'] 🎨" }
+        ]
+    },
+    {
+        id: "gka-transicion",
+        title: "Transición",
+        artist: "yosoygka",
+        album: "Sencillos Oficiales / GKA Showcase",
+        cover: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=400&q=80",
+        youtubeId: "QdqXFBATMuk",
+        buyUrl: "https://wa.me/56920074803?text=Hola%20GKA,%20me%20interesa%20adquirir%20o%20colaborar%20en%20Transición",
+        duration: "3:01",
+        lyrics: [
+            { time: 0, text: "🌀 [Yosoygka — Sencillo 'Transición'] 🌀" }
+        ]
+    },
+    {
+        id: "gka-ve",
+        title: "V E",
+        artist: "yosoygka",
+        album: "Lanzamientos Oficiales / GKA",
+        cover: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=400&q=80",
+        youtubeId: "yDqgPYn0FY4",
+        buyUrl: "https://wa.me/56920074803?text=Hola%20GKA,%20me%20interesa%20adquirir%20o%20colaborar%20en%20V%20E",
+        duration: "2:45",
+        lyrics: [
+            { time: 0, text: "💿 [Yosoygka — Single 'V E'] 💿" }
+        ]
+    },
+    {
+        id: "gka-hablarteclaro",
+        title: "Pa Hablarte Claro",
+        artist: "yosoygka",
+        album: "Sencillos Oficiales",
+        cover: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=400&q=80",
+        youtubeId: "3ZIn0ZPkQKs",
+        buyUrl: "https://wa.me/56920074803?text=Hola%20GKA,%20me%20interesa%20adquirir%20o%20colaborar%20en%20Pa%20Hablarte%20Claro",
+        duration: "3:22",
+        lyrics: [
+            { time: 0, text: "🗣️ [Yosoygka — 'Pa Hablarte Claro'] 🗣️" }
+        ]
+    },
+    {
+        id: "gka-laloo",
+        title: "Laloo",
+        artist: "yosoygka",
+        album: "Sencillos Oficiales / GKA Showcase",
+        cover: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=400&q=80",
+        youtubeId: "CyXqO0BrWVw",
+        buyUrl: "https://wa.me/56920074803?text=Hola%20GKA,%20me%20interesa%20adquirir%20o%20colaborar%20en%20Laloo",
+        duration: "3:08",
+        lyrics: [
+            { time: 0, text: "🎤 [Yosoygka — Sencillo 'Laloo'] 🎤" }
+        ]
+    },
+    {
+        id: "gka-hampartelofi",
+        title: "Hamparte Lofi (Art Track)",
+        artist: "yosoygka",
+        album: "Beats de Distribución / GKA",
+        cover: "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=400&q=80",
+        youtubeId: "NBRl-cB2a7g",
+        buyUrl: "https://wa.me/56920074803?text=Hola%20GKA,%20me%20interesa%20el%20beat%20Hamparte%20Lofi",
+        duration: "2:20",
+        lyrics: [
+            { time: 0, text: "🎨 [Yosoygka — Hamparte Lofi Art Track] 🎨" }
+        ]
+    },
+    {
+        id: "gka-toknoh",
+        title: "Lo Tknoh",
+        artist: "yosoygka",
+        album: "Sencillos Oficiales / GKA Showcase",
+        cover: "https://images.unsplash.com/photo-1571330735066-03add575248c?auto=format&fit=crop&w=400&q=80",
+        youtubeId: "5AKDyN2QfHI",
+        buyUrl: "https://wa.me/56920074803?text=Hola%20GKA,%20me%20interesa%20adquirir%20o%20colaborar%20en%20Lo%20Tknoh",
+        duration: "2:54",
+        lyrics: [
+            { time: 0, text: "🔊 [Yosoygka — 'Lo Tknoh'] 🔊" }
+        ]
+    },
+    {
+        id: "gka-tas",
+        title: "A 100 700 Tas",
+        artist: "yosoygka",
+        album: "Sencillos Oficiales / GKA Showcase",
+        cover: "https://images.unsplash.com/photo-1516280440614-37939bbacd6a?auto=format&fit=crop&w=400&q=80",
+        youtubeId: "qSJlkU7GnGw",
+        buyUrl: "https://wa.me/56920074803?text=Hola%20GKA,%20me%20interesa%20adquirir%20o%20colaborar%20en%20A%20100%20700%20Tas",
+        duration: "3:02",
+        lyrics: [
+            { time: 0, text: "🔥 [Yosoygka — 'A 100 700 Tas'] 🔥" }
+        ]
+    },
+    {
+        id: "gka-a79",
+        title: "A 79",
+        artist: "yosoygka",
+        album: "Lanzamientos Oficiales / GKA Showcase",
+        cover: "https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?auto=format&fit=crop&w=400&q=80",
+        youtubeId: "fQ-Sw3wDFU8",
+        buyUrl: "https://wa.me/56920074803?text=Hola%20GKA,%20me%20interesa%20adquirir%20o%20colaborar%20en%20A%2079",
+        duration: "3:10",
+        lyrics: [
+            { time: 0, text: "📻 [Yosoygka — Single 'A 79'] 📻" }
+        ]
+    },
+    {
+        id: "gka-delamari",
+        title: "Delamari",
+        artist: "yosoygka",
+        album: "Sencillos / GKA Showcase",
+        cover: "https://images.unsplash.com/photo-1453090927415-5f45085b65c0?auto=format&fit=crop&w=400&q=80",
+        youtubeId: "gGTtqU-3qsg",
+        buyUrl: "https://wa.me/56920074803?text=Hola%20GKA,%20me%20interesa%20adquirir%20o%20colaborar%20en%20Delamari",
+        duration: "2:48",
+        lyrics: [
+            { time: 0, text: "🌊 [Yosoygka — 'Delamari'] 🌊" }
+        ]
+    },
+    {
+        id: "gka-freelofi",
+        title: "Free Lofi",
+        artist: "yosoygka",
+        album: "Lanzamientos / GKA Beats",
+        cover: "https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?auto=format&fit=crop&w=400&q=80",
+        youtubeId: "So7738aati0",
+        buyUrl: "https://wa.me/56920074803?text=Hola%20GKA,%20me%20interesa%20el%20beat%20Free%20Lofi",
+        duration: "3:12",
+        lyrics: [
+            { time: 0, text: "🌿 [Yosoygka — Free Lofi Art Track] 🌿" }
+        ]
+    },
+    {
+        id: "gka-equilibrio",
+        title: "Equilibrio",
+        artist: "yosoygka (Ft. Jospone & El Refugio)",
+        album: "Sencillos Oficiales / Rap",
+        cover: "https://images.unsplash.com/photo-1471478331149-c72f17e33c73?auto=format&fit=crop&w=400&q=80",
+        youtubeId: "b1jIJ_akw3k",
+        buyUrl: "https://wa.me/56920074803?text=Hola%20GKA,%20me%20interesa%20adquirir%20o%20colaborar%20en%20Equilibrio",
+        duration: "3:35",
+        lyrics: [
+            { time: 0, text: "⚖️ [Yosoygka — Sencillo 'Equilibrio' Ft Jospone & El Refugio] ⚖️" }
+        ]
+    },
+    {
+        id: "gka-lospace",
+        title: "Lospace",
+        artist: "yosoygka",
+        album: "Lanzamientos / GKA Showcase",
+        cover: "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=400&q=80",
+        youtubeId: "2z84yprp4uA",
+        buyUrl: "https://wa.me/56920074803?text=Hola%20GKA,%20me%20interesa%20adquirir%20o%20colaborar%20en%20Lospace",
+        duration: "3:04",
+        lyrics: [
+            { time: 0, text: "🌌 [Yosoygka — Single 'Lospace'] 🌌" }
+        ]
+    },
+    {
+        id: "gka-avprincipal",
+        title: "Av. Principal",
+        artist: "yosoygka",
+        album: "Sencillos / GKA Showcase",
+        cover: "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=400&q=80",
+        youtubeId: "D1cPi1bj-kI",
+        buyUrl: "https://wa.me/56920074803?text=Hola%20GKA,%20me%20interesa%20adquirir%20o%20colaborar%20en%20Av.%20Principal",
+        duration: "2:58",
+        lyrics: [
+            { time: 0, text: "🏙️ [Yosoygka — Sencillo 'Av. Principal'] 🏙️" }
         ]
     }
 ];
