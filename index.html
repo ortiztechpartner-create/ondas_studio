@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ondas Studio — Showroom Virtual Premium</title>
+    <meta name="description" content="Portafolio interactivo de audio, video y sesiones para los clientes de Ondas Studio. Escucha la calidad de mezcla, máster y producción de primer nivel.">
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Cinematic Canvas -->
+    <div class="cinematic-bg" id="cinematicBg"></div>
+    <div class="cinematic-overlay"></div>
+
+    <div class="app-container">
+        <!-- Sidebar Izquierdo (Branding Ondas Studio) -->
+        <aside class="sidebar">
+            <div class="ondas-brand-container">
+                <div class="ondas-logo-box">
+                    <span class="logo-on">ON</span>
+                    <span class="logo-das">DAS</span>
+                </div>
+                <div class="brand-text-block">
+                    <span class="brand-name">ondas.studio</span>
+                    <span class="brand-sub">SHOWROOM VIRTUAL</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-menu">
+                <a href="#" class="menu-item active" id="menuHome">
+                    <i data-lucide="disc"></i>
+                    <span>Portfolio</span>
+                </a>
+                <a href="#" class="menu-item" id="menuSearch">
+                    <i data-lucide="search"></i>
+                    <span>Buscar Pistas</span>
+                </a>
+                <a href="#" class="menu-item" id="menuAbout">
+                    <i data-lucide="info"></i>
+                    <span>El Estudio</span>
+                </a>
+            </nav>
+
+            <div class="divider"></div>
+
+            <div class="mode-selector-container">
+                <p class="sidebar-section-title">Modo de Audición</p>
+                <div class="mode-pill-container">
+                    <button class="mode-btn active" id="btnModeMusic" title="Modo Master (Audio)">
+                        <i data-lucide="music"></i>
+                        <span>Modo Master</span>
+                    </button>
+                    <button class="mode-btn" id="btnModeVideo" title="Modo Sesión (Video)">
+                        <i data-lucide="tv-2"></i>
+                        <span>Modo Sesión</span>
+                    </button>
+                    <button class="mode-btn" id="btnModeKaraoke" title="Modo Vocal (Guión)">
+                        <i data-lucide="mic-2"></i>
+                        <span>Modo Vocal</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Botones de Acción de Venta (CTA para el Estudio) -->
+            <div class="sidebar-cta-block">
+                <p class="cta-title">¿Listo para grabar?</p>
+                <p class="cta-desc">Reserva tu sesión de estudio o cotiza tu máster hoy mismo.</p>
+                <a href="https://wa.me/19803420151" target="_blank" class="contact-button">
+                    <i data-lucide="message-square"></i>
+                    <span>Contactar Studio</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Panel Central -->
+        <main class="main-content">
+            <!-- Cabecera -->
+            <header class="app-header">
+                <div class="header-nav">
+                    <div class="studio-status">
+                        <span class="status-indicator"></span>
+                        <span class="status-text">ESTUDIO EN LÍNEA — GRABANDO</span>
+                    </div>
+                </div>
+
+                <div class="search-bar-container" id="searchBarContainer">
+                    <i data-lucide="search" class="search-icon"></i>
+                    <input type="text" id="searchInput" placeholder="Buscar canciones, géneros o servicios..." autocomplete="off">
+                </div>
+
+                <div class="user-profile">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Estudio Admin" class="user-avatar">
+                    <span class="user-name">Ondas Admin</span>
+                </div>
+            </header>
+
+            <!-- Sección de Contenido -->
+            <div class="content-panel" id="contentPanel">
+                <!-- VISTA 1: HOME PORTFOLIO -->
+                <section class="view-section active-view" id="viewHome">
+                    <h1 class="welcome-title">Ondas Showcase</h1>
+                    <p class="welcome-desc">Escucha una selección exclusiva de nuestros mejores trabajos de grabación, mezcla y máster analógico.</p>
+                    
+                    <!-- Grilla de Accesos Rápidos de Portfolio -->
+                    <div class="quick-grid" id="quickGrid">
+                        <!-- Generado dinámicamente por JS -->
+                    </div>
+
+                    <div class="music-section">
+                        <h2 class="section-title">Trabajos Destacados</h2>
+                        <div class="cards-grid" id="recommendedGrid">
+                            <!-- Generado dinámicamente por JS -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- VISTA 2: RESULTADOS DE BÚSQUEDA -->
+                <section class="view-section" id="viewSearchResults">
+                    <h2 class="section-title">Resultados de tu búsqueda</h2>
+                    <div class="search-results-list" id="searchResultsList">
+                        <!-- Resultados -->
+                    </div>
+                </section>
+
+                <!-- VISTA 3: SOBRE EL ESTUDIO -->
+                <section class="view-section" id="viewAbout">
+                    <div class="about-grid">
+                        <div class="about-text-block">
+                            <span class="about-tag">EQUIPAMIENTO DE ÉLITE</span>
+                            <h2 class="about-title">Sonido Analógico Profesional</h2>
+                            <p class="about-desc">En <strong>Ondas Studio</strong> combinamos el carácter único y la calidez de los procesadores analógicos (compresores ópticos, preamplificadores a tubos) con la precisión milimétrica del entorno digital para lograr producciones con presencia, pegada y claridad competitiva.</p>
+                            
+                            <ul class="gear-list">
+                                <li><i data-lucide="check-circle-2"></i> Preamplificadores Neve & SSL de clase mundial</li>
+                                <li><i data-lucide="check-circle-2"></i> Microfonía de condensador Neumann & AKG</li>
+                                <li><i data-lucide="check-circle-2"></i> Convertidores de alta definición Universal Audio</li>
+                                <li><i data-lucide="check-circle-2"></i> Monitoreo acústico calibrado de precisión</li>
+                            </ul>
+                        </div>
+                        <div class="about-img-block">
+                            <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=600&q=80" alt="Consola Ondas Studio" class="about-studio-img">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ESCENARIOS DE REPRODUCCIÓN (PANELES DINÁMICOS) -->
+                
+                <!-- MODO VIDEO: Vídeos de sesiones o clips oficiales -->
+                <div class="player-mode-panel hidden" id="panelModeVideo">
+                    <div class="video-stage">
+                        <div class="video-wrapper">
+                            <div id="youtubeVideoPlayer"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODO MÚSICA: visualizador premium y carátula del Máster -->
+                <div class="player-mode-panel" id="panelModeMusic">
+                    <div class="music-stage">
+                        <div class="vinyl-container">
+                            <div class="vinyl-disc" id="vinylDisc">
+                                <img src="" alt="Carátula" class="vinyl-cover" id="musicStageCover">
+                                <div class="vinyl-center"></div>
+                            </div>
+                        </div>
+                        <div class="visualizer-container">
+                            <canvas id="audioVisualizerCanvas"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODO VOCAL: Letras de canciones, guiones o notas de mezcla sincronizadas -->
+                <div class="player-mode-panel hidden" id="panelModeKaraoke">
+                    <div class="karaoke-stage">
+                        <div class="lyrics-scroll-container" id="lyricsScrollContainer">
+                            <div class="lyrics-wrapper" id="lyricsWrapper">
+                                <p class="lyric-line no-lyrics">Selecciona un proyecto para iniciar el Modo Vocal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Barra inferior del Reproductor -->
+        <footer class="player-bar">
+            <!-- Izquierda: Metadatos -->
+            <div class="current-track-info">
+                <img src="" alt="Carátula" class="current-track-cover" id="playerCover">
+                <div class="current-track-text">
+                    <h4 class="current-track-title" id="playerTitle">Selecciona una pista</h4>
+                    <p class="current-track-artist" id="playerArtist">Ondas Studio Portfolio</p>
+                </div>
+            </div>
+
+            <!-- Centro: Controles de Audio -->
+            <div class="player-controls-container">
+                <div class="media-controls">
+                    <button class="control-btn" id="btnShuffle" title="Aleatorio"><i data-lucide="shuffle"></i></button>
+                    <button class="control-btn" id="btnPrev" title="Anterior"><i data-lucide="skip-back"></i></button>
+                    <button class="play-pause-btn" id="btnPlayPause" title="Reproducir/Pausar">
+                        <i data-lucide="play" class="play-icon-main"></i>
+                    </button>
+                    <button class="control-btn" id="btnNext" title="Siguiente"><i data-lucide="skip-forward"></i></button>
+                    <button class="control-btn" id="btnRepeat" title="Repetir"><i data-lucide="repeat"></i></button>
+                </div>
+
+                <div class="progress-bar-block">
+                    <span class="time-stamp" id="currentTimeText">0:00</span>
+                    <div class="progress-bar-track" id="progressBarTrack">
+                        <div class="progress-bar-fill" id="progressBarFill"></div>
+                        <div class="progress-handle" id="progressHandle"></div>
+                    </div>
+                    <span class="time-stamp" id="totalDurationText">0:00</span>
+                </div>
+            </div>
+
+            <!-- Derecha: Volumen -->
+            <div class="player-utilities">
+                <div class="volume-control-block">
+                    <button class="utility-btn" id="btnMute" title="Silenciar"><i data-lucide="volume-2"></i></button>
+                    <div class="volume-slider-track" id="volumeSliderTrack">
+                        <div class="volume-slider-fill" id="volumeSliderFill" style="width: 80%;"></div>
+                        <div class="volume-handle" id="volumeHandle" style="left: 80%;"></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- SoundCloud Widget API -->
+    <script src="https://w.soundcloud.com/player/api.js"></script>
+    <!-- Código Lógico Custom para Ondas Studio -->
+    <script src="app.js"></script>
+</body>
+</html>
