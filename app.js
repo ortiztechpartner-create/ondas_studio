@@ -13,6 +13,7 @@ const PORTFOLIO_DATABASE = [
         cover: "https://images.unsplash.com/photo-1509248961158-e54f6934749c?auto=format&fit=crop&w=400&q=80",
         audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
         youtubeId: "jfKfPfyJRdk", // Lofi dark vibe
+        buyUrl: "https://bsta.rs/Mz7evf", // Link real de venta CatKills
         duration: "6:12",
         lyrics: [
             { time: 0, text: "💀 [GKA Beats — Producción de Boom-Bap y Trap Oscuro] 💀" },
@@ -32,6 +33,7 @@ const PORTFOLIO_DATABASE = [
         cover: "https://images.unsplash.com/photo-1518173946687-a4c8a383392e?auto=format&fit=crop&w=400&q=80",
         audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
         youtubeId: "0CqWv619CNo",
+        buyUrl: "https://bsta.rs/4oQmUS", // Link real de venta Luces Nocturnas
         duration: "7:05",
         lyrics: [
             { time: 0, text: "🌇 [GKA Beats — Chill Lo-Fi & Melancholic Vibes] 🌇" },
@@ -51,6 +53,7 @@ const PORTFOLIO_DATABASE = [
         cover: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=400&q=80",
         audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
         youtubeId: "W6bK0n8G8n0",
+        buyUrl: "https://wa.me/56920074803?text=Hola%20GKA,%20me%20interesa%20un%20servicio%20de%20diseño%20sonoro%20o%20restauración%20de%20voz", // Link directo whatsapp servicios
         duration: "5:44",
         lyrics: [
             { time: 0, text: "🎚️ [GKA Mix & Sound Design — Edición de Diálogos y Foley] 🎚️" },
@@ -135,6 +138,7 @@ function initDOM() {
         playerCover: document.getElementById("playerCover"),
         playerTitle: document.getElementById("playerTitle"),
         playerArtist: document.getElementById("playerArtist"),
+        playerBuyBtn: document.getElementById("playerBuyBtn"),
         
         btnShuffle: document.getElementById("btnShuffle"),
         btnPrev: document.getElementById("btnPrev"),
@@ -300,6 +304,14 @@ function loadSong(index, shouldPlay = true) {
     dom.playerArtist.textContent = song.artist;
     dom.playerCover.src = song.cover;
     dom.musicStageCover.src = song.cover;
+    
+    // Actualizar botón de venta/licencia
+    if (song.buyUrl) {
+        dom.playerBuyBtn.href = song.buyUrl;
+        dom.playerBuyBtn.classList.remove("hidden");
+    } else {
+        dom.playerBuyBtn.classList.add("hidden");
+    }
     
     // Actualizar fondo ambiental
     dom.cinematicBg.style.backgroundImage = `url('${song.cover}')`;
