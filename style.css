@@ -986,7 +986,7 @@ body {
     display: flex;
     align-items: center;
     gap: var(--space-md);
-    width: 25%;
+    width: 32%;
 }
 
 .current-track-cover {
@@ -1389,17 +1389,19 @@ body {
     display: inline-flex;
     align-items: center;
     gap: var(--space-xs);
-    background-color: #ffffff;
+    background-color: #ffffff !important;
     color: #000000 !important;
     text-decoration: none;
     font-size: 11px;
     font-weight: 700;
-    padding: 6px 12px;
+    padding: 6px 14px;
     border-radius: var(--radius-sm);
     margin-left: var(--space-md);
     transition: var(--transition-normal);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     animation: pulseBuyBtn 2.5s infinite alternate;
+    white-space: nowrap;
+    border: none;
 }
 
 .buy-track-btn:hover {
