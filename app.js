@@ -7,64 +7,59 @@
 const PORTFOLIO_DATABASE = [
     {
         id: "ondas-neon",
-        title: "Neon Horizon (Sintetizadores & Mezcla)",
-        artist: "Ondas Studio Showroom",
-        album: "Sesión de Mastering Analógico",
-        cover: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=400&q=80",
+        title: "La Danza de la Muerte (Beat/Production)",
+        artist: "yosoygka (GKA Beats)",
+        album: "Trap & Dark Boom-Bap Showcase",
+        cover: "https://images.unsplash.com/photo-1509248961158-e54f6934749c?auto=format&fit=crop&w=400&q=80",
         audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
-        youtubeId: "jfKfPfyJRdk", // Video de ambiente Lofi Synthwave para modo sesión
+        youtubeId: "jfKfPfyJRdk", // Lofi dark vibe
         duration: "6:12",
         lyrics: [
-            { time: 0, text: "🎚️ [Notas de Mezcla: Calidez Analógica en Ondas Studio] 🎚️" },
-            { time: 5, text: "Siente el carácter del compresor óptico de tubos en el bus principal." },
-            { time: 11, text: "Logramos una pegada redonda y definida con nuestro hardware clásico." },
-            { time: 18, text: "La guitarra líder de fondo fue procesada con un delay de cinta analógico de 1970." },
-            { time: 25, text: "Sintoniza la claridad y separación de las frecuencias altas..." },
-            { time: 31, text: "No hay asperezas ni fatiga auditiva digital gracias a los preamplificadores de clase A." },
-            { time: 38, text: "🎚️ [Estribillo: Dinámica y Pegada Competitiva] 🎚️" },
-            { time: 44, text: "Un toque sutil de saturador analógico aplicado en el mastering final." },
-            { time: 50, text: "Pista calibrada para plataformas de streaming (LUFS integrados a -14 dB)." },
-            { time: 57, text: "Calidad de exportación profesional lista para sonar en cualquier club del mundo." }
+            { time: 0, text: "💀 [GKA Beats — Producción de Boom-Bap y Trap Oscuro] 💀" },
+            { time: 5, text: "Melodía de piano procesada con texturas de vinilo vintage de 12 bits." },
+            { time: 11, text: "Bombo (Kick) acústico seco y caja (Snare) gorda grabada en cinta." },
+            { time: 17, text: "Bajo sintetizado (808) sutil con deslizamiento armónico de subfrecuencias." },
+            { time: 24, text: "💀 [Estribillo: Estructura de Rap Clásico e Intenso] 💀" },
+            { time: 30, text: "Ideal para raperos con flows profundos o letras conscientes." },
+            { time: 36, text: "Licencia de leasing o exclusividad disponible. Escríbeme al WhatsApp." }
         ]
     },
     {
         id: "ondas-acustica",
-        title: "Acoustic Whispers (Captura de Micrófono)",
-        artist: "Ondas Studio Session",
-        album: "Prueba de Microfonía de Élite",
-        cover: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=400&q=80",
+        title: "Sunset Glow (Lo-Fi Vibes)",
+        artist: "yosoygka (GKA Beats)",
+        album: "Instrumentales Chillhop / Lo-Fi Vol. 3",
+        cover: "https://images.unsplash.com/photo-1518173946687-a4c8a383392e?auto=format&fit=crop&w=400&q=80",
         audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
-        youtubeId: "0CqWv619CNo", // Sesión acustica piano de fondo
+        youtubeId: "0CqWv619CNo",
         duration: "7:05",
         lyrics: [
-            { time: 0, text: "🎙️ [Captura Vocal: Prueba de Micrófono de Condensador Neuman U87] 🎙️" },
-            { time: 6, text: "Pista de voz grabada en nuestra cabina flotante 100% aislada acústicamente." },
-            { time: 12, text: "Conectado directamente a un preamplificador de tubos Avalon 737 SP." },
-            { time: 19, text: "La calidez, el aire y la textura íntima de la voz se conservan al máximo." },
-            { time: 26, text: "Sin ruidos de sala, sin eco no deseado ni siseos en el fondo." },
-            { time: 32, text: "🎙️ [Análisis de EQ: Limpieza de medios y realce de aire en 12kHz] 🎙️" },
-            { time: 39, text: "Compresión óptica suave aplicada en tiempo real para estabilizar la interpretación." },
-            { time: 46, text: "Rango dinámico conservado de forma natural. Ideal para solistas, Jazz y baladas." }
+            { time: 0, text: "🌇 [GKA Beats — Chill Lo-Fi & Melancholic Vibes] 🌇" },
+            { time: 6, text: "Acordes de guitarra eléctrica limpia grabados con un preamplificador analógico Neve." },
+            { time: 12, text: "Sonido Foley de lluvia y ruido ambiental integrado para calidez orgánica de cinta." },
+            { time: 19, text: "Caja con paneo lateral y efecto de delay analógico para profundidad estéreo." },
+            { time: 26, text: "🌇 [Corte: Transición con filtrado de paso alto] 🌇" },
+            { time: 32, text: "Perfecto para streams en vivo, podcasts o voces sutiles de fondo." },
+            { time: 38, text: "Beats listos para distribución en Spotify, YouTube y Apple Music." }
         ]
     },
     {
         id: "ondas-hiphop",
-        title: "Trap & Hip Hop Beat (Producción Urbana)",
-        artist: "Ondas Studio Beats",
-        album: "Librería de Loops Vol. 1",
-        cover: "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=400&q=80",
+        title: "Diseño Sonoro & Restauración Voces",
+        artist: "yosoygka (GKA Mix & Master)",
+        album: "Portafolio de Edición & Mezcla Diálogos",
+        cover: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=400&q=80",
         audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
-        youtubeId: "W6bK0n8G8n0", // Abstract bass visualizer
+        youtubeId: "W6bK0n8G8n0",
         duration: "5:44",
         lyrics: [
-            { time: 0, text: "🎹 [Beatmaking Showcase: Producción Urbana e Instrumental] 🎹" },
-            { time: 5, text: "Bombo (Kick) cargado en subfrecuencias con un 808 gordo y calibrado analógicamente." },
-            { time: 11, text: "Hi-hats de rapidez milimétrica paneados dinámicamente de izquierda a derecha." },
-            { time: 18, text: "Melodía de piano procesada con efectos de cinta lo-fi para añadir misterio." },
-            { time: 24, text: "Mezclado con el headroom exacto para que tu voz brille por encima de la pista." },
-            { time: 31, text: "🎹 [Drop Principal: Estructura Verso/Coro lista para rapear] 🎹" },
-            { time: 37, text: "Espacio reservado en el espectro medio (1kHz a 3kHz) para que no haya colisión con la voz." },
-            { time: 44, text: "Licencia de uso exclusivo disponible en Ondas Studio. Escríbenos a WhatsApp." }
+            { time: 0, text: "🎚️ [GKA Mix & Sound Design — Edición de Diálogos y Foley] 🎚️" },
+            { time: 5, text: "Limpieza inicial: Remoción de ruidos de fondo, siseos y reverberación de sala." },
+            { time: 11, text: "Compresión por bandas para nivelar sílabas y acentuar la dicción vocal." },
+            { time: 17, text: "Ecualización quirúrgica para eliminar resonancias molestas de micrófono." },
+            { time: 23, text: "Nivelación del volumen final para radio, televisión o plataformas de streaming." },
+            { time: 30, text: "🎚️ [Análisis: Mezcla estéreo balanceada y amplia] 🎚️" },
+            { time: 37, text: "¿Tienes un podcast, audiolibro o voz comercial? Cotiza tu proyecto hoy mismo." }
         ]
     }
 ];
