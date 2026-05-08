@@ -1428,3 +1428,14 @@ body {
         box-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
     }
 }
+
+/* Offscreen video rendering for continuous audio play in other modes */
+.player-mode-panel.video-offscreen {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+    width: 1px !important;
+    height: 1px !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}

@@ -6,83 +6,67 @@
 // Base de datos de proyectos y demostraciones de Ondas Studio
 const PORTFOLIO_DATABASE = [
     {
-        id: "gka-catkills",
-        title: "CatKills (Beat/Production)",
-        artist: "yosoygka (GKA Beats)",
-        album: "Dark Trap Instrumental Showcase",
-        cover: "https://images.unsplash.com/photo-1509248961158-e54f6934749c?auto=format&fit=crop&w=400&q=80",
-        audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
-        youtubeId: "jfKfPfyJRdk", // Lofi dark vibe
-        buyUrl: "https://bsta.rs/Mz7evf", // Link real de venta CatKills
-        duration: "6:12",
+        id: "gka-sincoincidir",
+        title: "Sin Coincidir (Sencillo Oficial)",
+        artist: "yosoygka (Prod. Botistudio)",
+        album: "Sencillos Oficiales / GKA Showcase",
+        cover: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80",
+        youtubeId: "QAQdclQr1qY", // Video Oficial Real
+        buyUrl: "https://wa.me/56920074803?text=Hola%20GKA,%20me%20interesa%20adquirir%20o%20colaborar%20en%20el%20proyecto%20Sin%20Coincidir",
+        duration: "3:10",
         lyrics: [
-            { time: 0, text: "💀 [GKA Beats — Instrumental 'CatKills'] 💀" },
-            { time: 5, text: "Melodía de piano procesada con texturas de vinilo vintage de 12 bits." },
-            { time: 11, text: "Bombo (Kick) acústico seco y caja (Snare) gorda grabada en cinta." },
-            { time: 17, text: "Bajo sintetizado (808) sutil con deslizamiento armónico de subfrecuencias." },
-            { time: 24, text: "💀 [Estribillo: Estructura de Rap Clásico e Intenso] 💀" },
-            { time: 30, text: "Ideal para raperos con flows profundos o letras conscientes." },
-            { time: 36, text: "Licencia de leasing o exclusividad disponible en Beatstars." }
+            { time: 0, text: "🎵 [Yosoygka — Sencillo Oficial 'Sin Coincidir'] 🎵" },
+            { time: 5, text: "Voz R&B con compresión cálida de válvulas analógicas en Ondas Studio." },
+            { time: 12, text: "Espacialidad estéreo ampliada mediante micro-delays e imágen psicoacústica." },
+            { time: 18, text: "Producción ejecutada por Botistudio, masterizada en Ondas Studio." }
         ]
     },
     {
-        id: "gka-luces",
-        title: "Luces Nocturnas (Lo-Fi Vibes)",
+        id: "gka-muchostienen",
+        title: "Muchos Tienen Una (Ft. Slash Noise)",
+        artist: "yosoygka Ft. Slash Noise",
+        album: "Colaboraciones Especiales / Rap",
+        cover: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=400&q=80",
+        youtubeId: "_eAqKsbgCYM", // Video Oficial Real
+        buyUrl: "https://wa.me/56920074803?text=Hola%20GKA,%20me%20interesa%20adquirir%20o%20colaborar%20en%20el%20proyecto%20Muchos%20tienen%20una",
+        duration: "3:42",
+        lyrics: [
+            { time: 0, text: "🎤 [Yosoygka Ft. Slash Noise — Muchos Tienen Una] 🎤" },
+            { time: 6, text: "Flow de rap clásico, barras directas y un beat contundente." },
+            { time: 13, text: "Acentuación perfecta de rimas mediante dobles voces paneadas a los extremos." },
+            { time: 20, text: "Mezcla analógica de voces para máxima calidez y presencia." }
+        ]
+    },
+    {
+        id: "gka-hamparte",
+        title: "Antonio García Villarán (Lofi Beats)",
         artist: "yosoygka (GKA Beats)",
-        album: "Chillhop & Lo-Fi Beats Vol. 1",
+        album: "Beats Conceptuales / Lofi Collection",
         cover: "https://images.unsplash.com/photo-1518173946687-a4c8a383392e?auto=format&fit=crop&w=400&q=80",
-        audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
-        youtubeId: "0CqWv619CNo",
-        buyUrl: "https://bsta.rs/4oQmUS", // Link real de venta Luces Nocturnas
-        duration: "7:05",
+        youtubeId: "OUuuHwHKsYk", // Video Oficial Real (Hamparte Lofi)
+        buyUrl: "https://wa.me/56920074803?text=Hola%20GKA,%20me%20interesa%20el%20beat%20conceptual%20Antonio%20Garcia%20Villaran",
+        duration: "2:18",
         lyrics: [
-            { time: 0, text: "🌇 [GKA Beats — Chill Instrumental 'Luces Nocturnas'] 🌇" },
-            { time: 6, text: "Acordes de guitarra eléctrica limpia grabados con un preamplificador analógico Neve." },
-            { time: 12, text: "Sonido Foley de lluvia y ruido ambiental integrado para calidez de cinta." },
-            { time: 19, text: "Caja con paneo lateral y efecto de delay analógico para profundidad estéreo." },
-            { time: 26, text: "🌇 [Corte: Transición con filtrado de paso alto] 🌇" },
-            { time: 32, text: "Perfecto para streams en vivo, podcasts o voces sutiles de fondo." },
-            { time: 38, text: "Beats listos para distribución en Spotify, YouTube y Beatstars." }
+            { time: 0, text: "🎨 [Yosoygka — Instrumental Lofi 'Hamparte'] 🎨" },
+            { time: 5, text: "Estilo Lofi chill melancólico inspirado en el famoso crítico de arte." },
+            { time: 11, text: "Sampleo y texturas clásicas de vinilo con un ritmo relajante." },
+            { time: 17, text: "Licencia de leasing disponible para creadores de contenido y músicos." }
         ]
     },
     {
-        id: "gka-a83",
-        title: "A 8-3 (Boom-Bap Instrumental)",
+        id: "gka-relaxpiano",
+        title: "Free Lo-Fi Relax Piano Beat",
         artist: "yosoygka (GKA Beats)",
-        album: "Classic Hip-Hop Beatstars Collection",
-        cover: "https://images.unsplash.com/photo-1484755560695-a4c37e9044a5?auto=format&fit=crop&w=400&q=80",
-        audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
-        youtubeId: "6KqK5bH4UfU",
-        buyUrl: "https://bsta.rs/ETgXqv", // Link real de venta A 8-3
-        duration: "5:02",
-        lyrics: [
-            { time: 0, text: "🔥 [GKA Beats — Instrumental Boom-Bap 'A 8-3'] 🔥" },
-            { time: 6, text: "Batería clásica con swing natural MPC, bombo ponchado y caja brillante." },
-            { time: 12, text: "Sampleo melódico de metales vintage filtrados para atmósfera clásica." },
-            { time: 18, text: "Bajo profundo ejecutado en sintetizador Moog con presencia armónica media." },
-            { time: 24, text: "🔥 [Estribillo: Groove clásico de Hip-Hop de los 90] 🔥" },
-            { time: 30, text: "Excelente para freestyles rápidos, rimas pesadas o barras underground." },
-            { time: 36, text: "Licencia comercial disponible para todas las plataformas digitales." }
-        ]
-    },
-    {
-        id: "gka-sounddesign",
-        title: "Diseño Sonoro & Restauración Voces",
-        artist: "yosoygka (GKA Mix & Master)",
-        album: "Portafolio de Edición & Mezcla Diálogos",
+        album: "Beats de Distribución Libre",
         cover: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=400&q=80",
-        audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
-        youtubeId: "W6bK0n8G8n0",
-        buyUrl: "https://wa.me/56920074803?text=Hola%20GKA,%20me%20interesa%20un%20servicio%20de%20diseño%20sonoro%20o%20restauración%20de%20voz", // Link directo whatsapp servicios
-        duration: "5:44",
+        youtubeId: "k37eDZdaeu4", // Video Oficial Real (Relax Piano Lofi)
+        buyUrl: "https://wa.me/56920074803?text=Hola%20GKA,%20me%20interesa%20adquirir%20la%20licencia%20comercial%20de%20Relax%20Piano%20Beat",
+        duration: "3:05",
         lyrics: [
-            { time: 0, text: "🎚️ [GKA Mix & Sound Design — Edición de Diálogos y Foley] 🎚️" },
-            { time: 5, text: "Limpieza inicial: Remoción de ruidos de fondo, siseos y reverberación de sala." },
-            { time: 11, text: "Compresión por bandas para nivelar sílabas y acentuar la dicción vocal." },
-            { time: 17, text: "Ecualización quirúrgica para eliminar resonancias molestas de micrófono." },
-            { time: 23, text: "Nivelación del volumen final para radio, televisión o plataformas de streaming." },
-            { time: 30, text: "🎚️ [Análisis: Mezcla estéreo balanceada y amplia] 🎚️" },
-            { time: 37, text: "¿Tienes un podcast, audiolibro o voz comercial? Cotiza tu proyecto hoy mismo." }
+            { time: 0, text: "🎹 [Yosoygka — Free Lo-Fi Piano Beat] 🎹" },
+            { time: 6, text: "Bases perfectas para relajación, estudio o podcasts." },
+            { time: 12, text: "Teclados rhodes filtrados y batería sutil." },
+            { time: 19, text: "Uso libre para proyectos no comerciales. Cotiza licencia comercial por WhatsApp." }
         ]
     }
 ];
@@ -99,7 +83,7 @@ const state = {
 };
 
 // Motores de Audio y Video
-let audioEngine = new Audio();
+let audioEngine = null;
 let ytPlayer = null;
 let isYTApiLoaded = false;
 let updateInterval = null;
@@ -313,8 +297,7 @@ function loadSong(index, shouldPlay = true) {
     state.currentSongIndex = index;
     const song = state.playlist[index];
     
-    // Resetear motores de reproducción
-    audioEngine.pause();
+    // Resetear reproducción
     if (ytPlayer && typeof ytPlayer.pauseVideo === 'function') {
         ytPlayer.pauseVideo();
     }
@@ -336,23 +319,12 @@ function loadSong(index, shouldPlay = true) {
     // Actualizar fondo ambiental
     dom.cinematicBg.style.backgroundImage = `url('${song.cover}')`;
     
-    // Determinar motor basándonos en el modo activo actual
-    if (state.currentMode === "video") {
-        if (ytPlayer && isYTApiLoaded) {
-            ytPlayer.cueVideoById(song.youtubeId);
-            if (shouldPlay) {
-                ytPlayer.playVideo();
-                state.isPlaying = true;
-            }
-        }
-    } else {
-        // En Modo Master y Modo Vocal usamos el audio de alta calidad directa
-        audioEngine.src = song.audioUrl;
-        audioEngine.load();
+    // Reproducir siempre con el YouTube Player para usar sus audios reales
+    if (ytPlayer && isYTApiLoaded) {
+        ytPlayer.cueVideoById(song.youtubeId);
         if (shouldPlay) {
-            audioEngine.play()
-                .then(() => { state.isPlaying = true; updatePlayPauseUI(); })
-                .catch(err => console.log("Fricción del navegador para audio:", err));
+            ytPlayer.playVideo();
+            state.isPlaying = true;
         }
     }
     
@@ -363,20 +335,22 @@ function loadSong(index, shouldPlay = true) {
     renderStudioNotes(song.lyrics);
     startProgressTimer();
 }
-
+    
 function playSongAt(index) {
     loadSong(index, true);
     switchView("home"); // Regresa a home si estaba en Ficha o Búsqueda para ver el reproductor
 }
-
+    
 function togglePlayPause() {
     if (state.isPlaying) {
-        if (state.currentMode === "video" && ytPlayer) ytPlayer.pauseVideo();
-        else audioEngine.pause();
+        if (ytPlayer && typeof ytPlayer.pauseVideo === 'function') {
+            ytPlayer.pauseVideo();
+        }
         state.isPlaying = false;
     } else {
-        if (state.currentMode === "video" && ytPlayer) ytPlayer.playVideo();
-        else audioEngine.play().catch(e => console.log(e));
+        if (ytPlayer && typeof ytPlayer.playVideo === 'function') {
+            ytPlayer.playVideo();
+        }
         state.isPlaying = true;
     }
     updatePlayPauseUI();
@@ -413,12 +387,9 @@ function startProgressTimer() {
         let current = 0;
         let duration = 0;
         
-        if (state.currentMode === "video" && ytPlayer && typeof ytPlayer.getCurrentTime === 'function') {
+        if (ytPlayer && typeof ytPlayer.getCurrentTime === 'function') {
             current = ytPlayer.getCurrentTime() || 0;
             duration = ytPlayer.getDuration() || 1;
-        } else {
-            current = audioEngine.currentTime || 0;
-            duration = audioEngine.duration || 1;
         }
         
         if (isNaN(duration) || duration === 0) duration = 1;
@@ -435,32 +406,27 @@ function startProgressTimer() {
         }
     }, 250);
 }
-
+    
 function formatTime(s) {
     if (isNaN(s)) return "0:00";
     const m = Math.floor(s / 60);
     const sec = Math.floor(s % 60);
     return `${m}:${sec < 10 ? '0' : ''}${sec}`;
 }
-
+    
 function handleTimelineClick(e) {
     const rect = dom.progressBarTrack.getBoundingClientRect();
     const percent = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
     
-    let duration = 0;
-    if (state.currentMode === "video" && ytPlayer) {
-        duration = ytPlayer.getDuration() || 0;
+    if (ytPlayer && typeof ytPlayer.getDuration === 'function') {
+        const duration = ytPlayer.getDuration() || 0;
         ytPlayer.seekTo(percent * duration, true);
-    } else {
-        duration = audioEngine.duration || 0;
-        audioEngine.currentTime = percent * duration;
     }
 }
-
+    
 // Volumen
 function updateVolume(percent) {
     state.volume = Math.max(0, Math.min(1, percent));
-    audioEngine.volume = state.volume;
     if (ytPlayer && typeof ytPlayer.setVolume === 'function') ytPlayer.setVolume(state.volume * 100);
     
     dom.volumeSliderFill.style.width = `${state.volume * 100}%`;
@@ -475,7 +441,7 @@ function updateVolume(percent) {
     }
     lucide.createIcons();
 }
-
+    
 // ==========================================================================
 // NOTAS TÉCNICAS SINOPSIS DE MEZCLA (MODO VOCAL / LETRAS)
 // ==========================================================================
@@ -493,8 +459,7 @@ function renderStudioNotes(notes) {
         pLine.dataset.time = line.time;
         
         pLine.addEventListener("click", () => {
-            if (state.currentMode === "video" && ytPlayer) ytPlayer.seekTo(line.time, true);
-            else audioEngine.currentTime = line.time;
+            if (ytPlayer && typeof ytPlayer.seekTo === 'function') ytPlayer.seekTo(line.time, true);
         });
         
         dom.lyricsWrapper.appendChild(pLine);
@@ -551,11 +516,11 @@ function selectPlayMode(mode) {
 
 function updateActiveModePanel() {
     dom.panelModeMusic.classList.add("hidden");
-    dom.panelModeVideo.classList.add("hidden");
+    dom.panelModeVideo.classList.add("video-offscreen");
     dom.panelModeKaraoke.classList.add("hidden");
     
     if (state.currentMode === "music") dom.panelModeMusic.classList.remove("hidden");
-    if (state.currentMode === "video") dom.panelModeVideo.classList.remove("hidden");
+    if (state.currentMode === "video") dom.panelModeVideo.classList.remove("video-offscreen");
     if (state.currentMode === "karaoke") dom.panelModeKaraoke.classList.remove("hidden");
 }
 
@@ -632,7 +597,6 @@ function initEventListeners() {
     dom.btnMute.addEventListener("click", () => {
         state.isMuted = !state.isMuted;
         if (state.isMuted) {
-            audioEngine.volume = 0;
             if (ytPlayer && typeof ytPlayer.mute === 'function') ytPlayer.mute();
             dom.btnMute.innerHTML = `<i data-lucide="volume-x"></i>`;
             dom.volumeSliderFill.style.width = `0%`;
@@ -644,7 +608,6 @@ function initEventListeners() {
     });
     
     dom.searchInput.addEventListener("input", (e) => handleSearch(e.target.value));
-    audioEngine.addEventListener("ended", nextTrack);
 }
 
 // ==========================================================================
