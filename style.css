@@ -410,6 +410,27 @@ body {
     border: 1px solid var(--border-glass);
 }
 
+.gka-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-circle);
+    background-color: #000000;
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Brush Script MT', cursive, 'Pacifico', 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    text-transform: lowercase;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 0 0 8px rgba(255, 255, 255, 0.05);
+    transform: rotate(-10deg);
+    flex-shrink: 0;
+    user-select: none;
+}
+
 .user-name {
     font-size: 12px;
     font-weight: 700;
