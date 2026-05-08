@@ -6,47 +6,67 @@
 // Base de datos de proyectos y demostraciones de Ondas Studio
 const PORTFOLIO_DATABASE = [
     {
-        id: "ondas-neon",
-        title: "La Danza de la Muerte (Beat/Production)",
+        id: "gka-catkills",
+        title: "CatKills (Beat/Production)",
         artist: "yosoygka (GKA Beats)",
-        album: "Trap & Dark Boom-Bap Showcase",
+        album: "Dark Trap Instrumental Showcase",
         cover: "https://images.unsplash.com/photo-1509248961158-e54f6934749c?auto=format&fit=crop&w=400&q=80",
         audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
         youtubeId: "jfKfPfyJRdk", // Lofi dark vibe
         buyUrl: "https://bsta.rs/Mz7evf", // Link real de venta CatKills
         duration: "6:12",
         lyrics: [
-            { time: 0, text: "💀 [GKA Beats — Producción de Boom-Bap y Trap Oscuro] 💀" },
+            { time: 0, text: "💀 [GKA Beats — Instrumental 'CatKills'] 💀" },
             { time: 5, text: "Melodía de piano procesada con texturas de vinilo vintage de 12 bits." },
             { time: 11, text: "Bombo (Kick) acústico seco y caja (Snare) gorda grabada en cinta." },
             { time: 17, text: "Bajo sintetizado (808) sutil con deslizamiento armónico de subfrecuencias." },
             { time: 24, text: "💀 [Estribillo: Estructura de Rap Clásico e Intenso] 💀" },
             { time: 30, text: "Ideal para raperos con flows profundos o letras conscientes." },
-            { time: 36, text: "Licencia de leasing o exclusividad disponible. Escríbeme al WhatsApp." }
+            { time: 36, text: "Licencia de leasing o exclusividad disponible en Beatstars." }
         ]
     },
     {
-        id: "ondas-acustica",
-        title: "Sunset Glow (Lo-Fi Vibes)",
+        id: "gka-luces",
+        title: "Luces Nocturnas (Lo-Fi Vibes)",
         artist: "yosoygka (GKA Beats)",
-        album: "Instrumentales Chillhop / Lo-Fi Vol. 3",
+        album: "Chillhop & Lo-Fi Beats Vol. 1",
         cover: "https://images.unsplash.com/photo-1518173946687-a4c8a383392e?auto=format&fit=crop&w=400&q=80",
         audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
         youtubeId: "0CqWv619CNo",
         buyUrl: "https://bsta.rs/4oQmUS", // Link real de venta Luces Nocturnas
         duration: "7:05",
         lyrics: [
-            { time: 0, text: "🌇 [GKA Beats — Chill Lo-Fi & Melancholic Vibes] 🌇" },
+            { time: 0, text: "🌇 [GKA Beats — Chill Instrumental 'Luces Nocturnas'] 🌇" },
             { time: 6, text: "Acordes de guitarra eléctrica limpia grabados con un preamplificador analógico Neve." },
-            { time: 12, text: "Sonido Foley de lluvia y ruido ambiental integrado para calidez orgánica de cinta." },
+            { time: 12, text: "Sonido Foley de lluvia y ruido ambiental integrado para calidez de cinta." },
             { time: 19, text: "Caja con paneo lateral y efecto de delay analógico para profundidad estéreo." },
             { time: 26, text: "🌇 [Corte: Transición con filtrado de paso alto] 🌇" },
             { time: 32, text: "Perfecto para streams en vivo, podcasts o voces sutiles de fondo." },
-            { time: 38, text: "Beats listos para distribución en Spotify, YouTube y Apple Music." }
+            { time: 38, text: "Beats listos para distribución en Spotify, YouTube y Beatstars." }
         ]
     },
     {
-        id: "ondas-hiphop",
+        id: "gka-a83",
+        title: "A 8-3 (Boom-Bap Instrumental)",
+        artist: "yosoygka (GKA Beats)",
+        album: "Classic Hip-Hop Beatstars Collection",
+        cover: "https://images.unsplash.com/photo-1484755560695-a4c37e9044a5?auto=format&fit=crop&w=400&q=80",
+        audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
+        youtubeId: "6KqK5bH4UfU",
+        buyUrl: "https://bsta.rs/ETgXqv", // Link real de venta A 8-3
+        duration: "5:02",
+        lyrics: [
+            { time: 0, text: "🔥 [GKA Beats — Instrumental Boom-Bap 'A 8-3'] 🔥" },
+            { time: 6, text: "Batería clásica con swing natural MPC, bombo ponchado y caja brillante." },
+            { time: 12, text: "Sampleo melódico de metales vintage filtrados para atmósfera clásica." },
+            { time: 18, text: "Bajo profundo ejecutado en sintetizador Moog con presencia armónica media." },
+            { time: 24, text: "🔥 [Estribillo: Groove clásico de Hip-Hop de los 90] 🔥" },
+            { time: 30, text: "Excelente para freestyles rápidos, rimas pesadas o barras underground." },
+            { time: 36, text: "Licencia comercial disponible para todas las plataformas digitales." }
+        ]
+    },
+    {
+        id: "gka-sounddesign",
         title: "Diseño Sonoro & Restauración Voces",
         artist: "yosoygka (GKA Mix & Master)",
         album: "Portafolio de Edición & Mezcla Diálogos",
