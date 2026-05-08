@@ -297,12 +297,128 @@ let isYTApiLoaded = false;
 let updateInterval = null;
 
 // ==========================================================================
+// CONFIGURACIÓN DE GOOGLE SHEETS (OPCIONAL / DINÁMICA)
+// ==========================================================================
+// Pega aquí la URL de tu Google Sheets publicado como CSV para autogestionar el catálogo:
+const GOOGLE_SHEET_CSV_URL = ""; 
+
+async function loadDynamicPlaylist() {
+    if (!GOOGLE_SHEET_CSV_URL || GOOGLE_SHEET_CSV_URL.trim() === "") {
+        console.log("INFO: Cargando catálogo estático oficial (Ondas Studio local).");
+        return;
+    }
+    
+    try {
+        console.log("INFO: Sincronizando catálogo con Google Sheets...");
+        const response = await fetch(GOOGLE_SHEET_CSV_URL);
+        if (!response.ok) throw new Error("Fallo al conectar con Google Sheets");
+        
+        const csvText = await response.text();
+        const rows = parseCSV(csvText);
+        
+        if (rows.length <= 1) {
+            console.warn("WARN: Google Sheets vacío o mal estructurado, cargando respaldo.");
+            return;
+        }
+        
+        // Cabeceras: id, title, artist, album, cover, youtubeId, buyUrl, duration, lyrics
+        const headers = rows[0].map(h => h.toLowerCase().trim());
+        const newPlaylist = [];
+        
+        for (let i = 1; i < rows.length; i++) {
+            const row = rows[i];
+            if (row.length < headers.length) continue;
+            
+            const song = {};
+            headers.forEach((header, index) => {
+                song[header] = row[index];
+            });
+            
+            // Procesamiento de notas técnicas/letras
+            if (song.lyrics) {
+                song.lyrics = parseCSVLyrics(song.lyrics);
+            } else {
+                song.lyrics = [];
+            }
+            
+            newPlaylist.push(song);
+        }
+        
+        if (newPlaylist.length > 0) {
+            PORTFOLIO_DATABASE.length = 0; // Vaciar array local
+            PORTFOLIO_DATABASE.push(...newPlaylist);
+            state.playlist = [...PORTFOLIO_DATABASE];
+            console.log("✅ ¡Catálogo sincronizado con Google Sheets con éxito!", PORTFOLIO_DATABASE);
+        }
+    } catch (err) {
+        console.error("🔴 Error cargando Google Sheets, usando catálogo de respaldo estático:", err);
+    }
+}
+
+// Analizador RFC-4180 básico de CSV para soportar comas dentro de las notas entre comillas
+function parseCSV(csvText) {
+    const lines = [];
+    let currentLine = [];
+    let inQuotes = false;
+    let currentValue = "";
+    
+    for (let i = 0; i < csvText.length; i++) {
+        const char = csvText[i];
+        const nextChar = csvText[i + 1];
+        
+        if (char === '"') {
+            if (inQuotes && nextChar === '"') {
+                currentValue += '"';
+                i++;
+            } else {
+                inQuotes = !inQuotes;
+            }
+        } else if (char === ',' && !inQuotes) {
+            currentLine.push(currentValue.trim());
+            currentValue = "";
+        } else if ((char === '\r' || char === '\n') && !inQuotes) {
+            if (char === '\r' && nextChar === '\n') {
+                i++;
+            }
+            currentLine.push(currentValue.trim());
+            if (currentLine.length > 1 || currentLine[0] !== "") {
+                lines.push(currentLine);
+            }
+            currentLine = [];
+            currentValue = "";
+        } else {
+            currentValue += char;
+        }
+    }
+    if (currentValue !== "" || currentLine.length > 0) {
+        currentLine.push(currentValue.trim());
+        lines.push(currentLine);
+    }
+    return lines;
+}
+
+// Formato de letras en Sheets: "0:Letra 1|5:Letra 2|12:Letra 3"
+function parseCSVLyrics(lyricsStr) {
+    if (!lyricsStr || lyricsStr.trim() === "") return [];
+    return lyricsStr.split("|").map(item => {
+        const parts = item.split(":");
+        const time = parseFloat(parts[0]) || 0;
+        const text = parts.slice(1).join(":").trim();
+        return { time, text };
+    });
+}
+
+// ==========================================================================
 // INICIALIZACIÓN
 // ==========================================================================
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
     initDOM();
     initEventListeners();
     loadYTApi();
+    
+    // Sincronización asíncrona de catálogo
+    await loadDynamicPlaylist();
+    
     renderPortfolioGrids();
     loadSong(state.currentSongIndex, false);
     initVisualizer();
