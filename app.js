@@ -467,6 +467,7 @@ function initDOM() {
         playerTitle: document.getElementById("playerTitle"),
         playerArtist: document.getElementById("playerArtist"),
         playerBuyBtn: document.getElementById("playerBuyBtn"),
+        playerBeatstarsBtn: document.getElementById("playerBeatstarsBtn"),
         
         btnShuffle: document.getElementById("btnShuffle"),
         btnPrev: document.getElementById("btnPrev"),
@@ -633,12 +634,10 @@ function loadSong(index, shouldPlay = true) {
     dom.musicStageCover.src = song.cover;
     
     // Actualizar botón de venta/licencia
-    if (song.buyUrl) {
-        dom.playerBuyBtn.href = song.buyUrl;
-        dom.playerBuyBtn.classList.remove("hidden");
-    } else {
-        dom.playerBuyBtn.classList.add("hidden");
-    }
+    const waMessage = `Hola GKA, quiero comprar este beat o loop: ${song.title}`;
+    dom.playerBuyBtn.href = `https://wa.me/56920074803?text=${encodeURIComponent(waMessage)}`;
+    dom.playerBuyBtn.classList.remove("hidden");
+    if(dom.playerBeatstarsBtn) dom.playerBeatstarsBtn.classList.remove("hidden");
     
     // Actualizar fondo ambiental
     dom.cinematicBg.style.backgroundImage = `url('${song.cover}')`;
