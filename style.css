@@ -1412,7 +1412,7 @@ body {
 
     .current-track-text {
         flex: 1;
-        max-width: 150px;
+        max-width: 95px; /* Reducido de 150px para dar 55px más de espacio */
     }
 
     .action-buttons-group {
@@ -1423,7 +1423,7 @@ body {
     }
 
     .action-buttons-group .buy-track-btn {
-        padding: 6px 10px;
+        padding: 5px 8px; /* Reducido ligeramente de 6px 10px para asegurar espacio */
         font-size: 10px;
         margin-left: 0 !important;
     }
