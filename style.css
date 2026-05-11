@@ -1230,6 +1230,11 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* Ocultar botón flotante de móvil por defecto en escritorio */
+.mobile-fab {
+    display: none !important;
+}
+
 /* ==========================================================================
    RESPONSIVIDAD DETALLADA (MANDAMIENTO #5 — F12 ACCORDANCE)
    ========================================================================== */
@@ -1266,7 +1271,7 @@ body {
 @media (max-width: 600px) {
     .app-container {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 64px 80px; /* Layout estilo móvil */
+        grid-template-rows: 1fr 64px auto; /* Adaptable height for mobile player */
     }
 
     .sidebar {
@@ -1354,25 +1359,79 @@ body {
         display: none;
     }
 
-    /* Reproductor inferior en móvil */
+    /* Grillas horizontales (Scroll lateral como grandes compañías) */
+    .quick-grid, .cards-grid {
+        display: flex !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory;
+        gap: var(--space-md);
+        padding-bottom: 12px;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .quick-grid::-webkit-scrollbar, .cards-grid::-webkit-scrollbar {
+        display: none; /* Look limpio sin scrollbar */
+    }
+
+    .quick-card {
+        flex: 0 0 80vw !important;
+        scroll-snap-align: start;
+    }
+
+    .music-card {
+        flex: 0 0 50vw !important;
+        scroll-snap-align: start;
+    }
+
+    /* Reproductor inferior adaptado en móvil (Dos filas para máximo espacio) */
     .player-bar {
         grid-row: 3;
         grid-column: 1;
-        padding: 0 var(--space-md);
-        height: 80px;
+        padding: var(--space-md) var(--space-md);
+        height: auto;
+        min-height: 130px;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-sm);
     }
 
     .current-track-info {
-        width: 60%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-md);
     }
 
     .current-track-cover {
         width: 44px;
         height: 44px;
+        flex-shrink: 0;
+    }
+
+    .current-track-text {
+        flex: 1;
+        max-width: 150px;
+    }
+
+    .action-buttons-group {
+        margin-left: auto;
+        display: flex;
+        gap: 6px;
+        flex-shrink: 0;
+    }
+
+    .action-buttons-group .buy-track-btn {
+        padding: 6px 10px;
+        font-size: 10px;
+        margin-left: 0 !important;
     }
 
     .player-controls-container {
-        width: 40%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     .progress-bar-block, .player-utilities, .control-btn#btnShuffle, .control-btn#btnRepeat {
@@ -1380,7 +1439,38 @@ body {
     }
 
     .media-controls {
-        gap: var(--space-md);
+        gap: var(--space-lg);
+    }
+
+    /* Botón flotante para contacto en móviles (WhatsApp verde) */
+    .mobile-fab {
+        display: flex !important;
+        position: fixed;
+        bottom: 165px; /* Posicionado sobre el reproductor de móvil que mide ~130px + espacio */
+        right: 18px;
+        width: 48px;
+        height: 48px;
+        border-radius: var(--radius-circle);
+        background-color: #25D366; /* WhatsApp Green */
+        color: white;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+        z-index: 999;
+        transition: transform 0.2s ease, background-color 0.2s ease;
+        text-decoration: none;
+    }
+    
+    .mobile-fab:active {
+        transform: scale(0.92);
+        background-color: #128C7E;
+    }
+    
+    .mobile-fab i {
+        width: 22px;
+        height: 22px;
+        stroke-width: 2.5px;
+        color: white !important;
     }
 }
 
