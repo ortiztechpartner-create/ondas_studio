@@ -47,12 +47,17 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+html, body {
+    height: 100dvh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Outfit', sans-serif;
     background-color: hsl(var(--bg-base));
     color: hsl(var(--color-text-primary));
-    overflow: hidden;
-    height: 100dvh;
     width: 100vw;
     user-select: none;
 }
