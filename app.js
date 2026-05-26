@@ -300,7 +300,7 @@ let updateInterval = null;
 // CONFIGURACIÓN DE GOOGLE SHEETS (OPCIONAL / DINÁMICA)
 // ==========================================================================
 // Pega aquí la URL de tu Google Sheets publicado como CSV para autogestionar el catálogo:
-const GOOGLE_SHEET_CSV_URL = ""; 
+const GOOGLE_SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRbKMKqLzGdbdpf3rG889dta2rvkjT67-KgYEbMnW4kkW35txpGfwWGouPbvQFhadfUqj9r-f7iThXj/pub?output=csv"; 
 
 async function loadDynamicPlaylist() {
     if (!GOOGLE_SHEET_CSV_URL || GOOGLE_SHEET_CSV_URL.trim() === "") {
@@ -435,11 +435,13 @@ function initDOM() {
         menuHome: document.getElementById("menuHome"),
         menuSearch: document.getElementById("menuSearch"),
         menuAbout: document.getElementById("menuAbout"),
+        menuEpk: document.getElementById("menuEpk"),
         
         // Vistas
         viewHome: document.getElementById("viewHome"),
         viewSearchResults: document.getElementById("viewSearchResults"),
         viewAbout: document.getElementById("viewAbout"),
+        viewEpk: document.getElementById("viewEpk"),
         contentPanel: document.getElementById("contentPanel"),
         
         // Buscador
@@ -536,6 +538,7 @@ function switchView(viewName) {
     dom.viewHome.classList.remove("active-view");
     dom.viewSearchResults.classList.remove("active-view");
     dom.viewAbout.classList.remove("active-view");
+    if (dom.viewEpk) dom.viewEpk.classList.remove("active-view");
     
     // Ocultar paneles de reproducción a menos que estemos en Home o Ficha Técnica
     if (viewName === "search") {
@@ -549,6 +552,8 @@ function switchView(viewName) {
             dom.viewHome.classList.add("active-view");
         } else if (viewName === "about") {
             dom.viewAbout.classList.add("active-view");
+        } else if (viewName === "epk" && dom.viewEpk) {
+            dom.viewEpk.classList.add("active-view");
         }
     }
     
@@ -556,10 +561,12 @@ function switchView(viewName) {
     dom.menuHome.classList.remove("active");
     dom.menuSearch.classList.remove("active");
     dom.menuAbout.classList.remove("active");
+    if (dom.menuEpk) dom.menuEpk.classList.remove("active");
     
     if (viewName === "home") dom.menuHome.classList.add("active");
     if (viewName === "search") dom.menuSearch.classList.add("active");
     if (viewName === "about") dom.menuAbout.classList.add("active");
+    if (viewName === "epk" && dom.menuEpk) dom.menuEpk.classList.add("active");
 }
 
 // ==========================================================================
@@ -901,6 +908,18 @@ function initEventListeners() {
     dom.menuHome.addEventListener("click", () => switchView("home"));
     dom.menuSearch.addEventListener("click", () => { switchView("search"); dom.searchInput.focus(); });
     dom.menuAbout.addEventListener("click", () => switchView("about"));
+    if (dom.menuEpk) dom.menuEpk.addEventListener("click", () => switchView("epk"));
+    
+    const bookingForm = document.getElementById("bookingForm");
+    if (bookingForm) {
+        bookingForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            // Aquí iría el fetch a la webhook de n8n
+            console.log("Enviando datos al Webhook de n8n...");
+            alert("¡Solicitud enviada con éxito! (Simulación Webhook n8n)");
+            bookingForm.reset();
+        });
+    }
     
     dom.btnModeMusic.addEventListener("click", () => selectPlayMode("music"));
     dom.btnModeVideo.addEventListener("click", () => selectPlayMode("video"));
