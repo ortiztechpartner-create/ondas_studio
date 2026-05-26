@@ -45,6 +45,10 @@
                     <i data-lucide="info"></i>
                     <span>El Estudio</span>
                 </a>
+                <a href="#" class="menu-item" id="menuEpk">
+                    <i data-lucide="award"></i>
+                    <span>Press Kit / EPK</span>
+                </a>
             </nav>
 
             <div class="divider"></div>
@@ -146,6 +150,56 @@
                         <div class="about-img-block">
                             <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=600&q=80" alt="Consola Ondas Studio" class="about-studio-img">
                         </div>
+                    </div>
+                </section>
+
+                <!-- VISTA 4: PRESS KIT / EPK -->
+                <section class="view-section" id="viewEpk">
+                    <div class="epk-header">
+                        <span class="about-tag">PRESS KIT OFICIAL</span>
+                        <h2 class="welcome-title">Electronic Press Kit</h2>
+                        <p class="welcome-desc">Material de prensa, biografía y booking oficial para <strong>Yosoygka</strong>.</p>
+                    </div>
+                    
+                    <div class="epk-grid">
+                        <div class="epk-bio-block">
+                            <h3 class="epk-section-title">Biografía</h3>
+                            <p class="epk-text-pitch">Productor musical, beatmaker y artista independiente. Especialista en texturas analógicas, diseño sonoro y ritmos chill.</p>
+                            <p class="epk-text-long">Yosoygka ha desarrollado un estilo único en la escena emergente, fusionando el alma del boom-bap clásico con texturas lofi modernas. Como director creativo detrás de El Refugio Records, su enfoque técnico en la mezcla y el master analógico garantiza estándares comerciales de alta fidelidad.<br><br>[TEXTO TEMPORAL - Esperando la biografía extendida y detallada del artista para reemplazar este párrafo].</p>
+                            
+                            <div class="epk-download-group">
+                                <a href="#" class="epk-download-btn"><i data-lucide="download"></i> Descargar Press Photos</a>
+                                <a href="#" class="epk-download-btn"><i data-lucide="file-text"></i> Descargar Tech Rider</a>
+                            </div>
+                        </div>
+                        <div class="epk-visual-block">
+                            <!-- Placeholder: Reemplazar con fotos reales de Gk -->
+                            <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=600&q=80" alt="Yosoygka Press Photo" class="epk-main-photo">
+                        </div>
+                    </div>
+                    
+                    <div class="epk-booking-section">
+                        <div class="epk-booking-header">
+                            <h3 class="epk-section-title">Booking & Contacto Webhook</h3>
+                            <p class="epk-text-pitch">Envía tu propuesta de colaboración o solicitud de servicios. (Conectado a automatización n8n).</p>
+                        </div>
+                        <form class="epk-booking-form" id="bookingForm">
+                            <div class="form-row">
+                                <div class="input-group">
+                                    <label>Nombre o Agencia</label>
+                                    <input type="text" placeholder="Ej. El Refugio Records" required class="glass-input" name="nombre">
+                                </div>
+                                <div class="input-group">
+                                    <label>Correo Electrónico</label>
+                                    <input type="email" placeholder="contacto@agencia.com" required class="glass-input" name="email">
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>Detalles de la Solicitud</label>
+                                <textarea placeholder="Describe el proyecto, fecha del show o servicio requerido (Mezcla, Booking, etc.)..." required class="glass-input" rows="4" name="detalles"></textarea>
+                            </div>
+                            <button type="submit" class="contact-button epk-submit"><i data-lucide="send"></i> Enviar Solicitud</button>
+                        </form>
                     </div>
                 </section>
 

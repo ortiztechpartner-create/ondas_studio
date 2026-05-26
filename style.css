@@ -1554,3 +1554,168 @@ body {
     opacity: 0 !important;
     pointer-events: none !important;
 }
+
+/* ==========================================================================
+   VISTA 4: PRESS KIT (EPK)
+   ========================================================================== */
+.epk-header {
+    margin-bottom: var(--space-xl);
+}
+
+.epk-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl);
+}
+
+.epk-section-title {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: var(--space-md);
+    border-left: 3px solid white;
+    padding-left: var(--space-sm);
+}
+
+.epk-text-pitch {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: var(--space-md);
+    line-height: 1.4;
+}
+
+.epk-text-long {
+    font-size: 14px;
+    color: hsl(var(--color-text-secondary));
+    line-height: 1.6;
+    margin-bottom: var(--space-lg);
+}
+
+.epk-download-group {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}
+
+.epk-download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-glass);
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 12px var(--space-md);
+    border-radius: var(--radius-sm);
+    transition: var(--transition-normal);
+    backdrop-filter: blur(10px);
+}
+
+.epk-download-btn:hover {
+    background-color: white;
+    color: black;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+}
+
+.epk-download-btn i {
+    width: 16px;
+    height: 16px;
+}
+
+.epk-visual-block {
+    width: 100%;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border-glass);
+    box-shadow: var(--shadow-premium);
+}
+
+.epk-main-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(1.1);
+    transition: var(--transition-normal);
+}
+
+.epk-main-photo:hover {
+    filter: grayscale(0%) contrast(1.1);
+}
+
+/* Booking Section */
+.epk-booking-section {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-md);
+    padding: var(--space-xl);
+    margin-top: var(--space-xl);
+}
+
+.epk-booking-header {
+    margin-bottom: var(--space-lg);
+}
+
+.epk-booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.input-group label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: hsl(var(--color-text-secondary));
+}
+
+.glass-input {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--border-glass);
+    color: white;
+    padding: 14px var(--space-md);
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 14px;
+    transition: var(--transition-normal);
+    outline: none;
+}
+
+.glass-input:focus {
+    border-color: white;
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: var(--shadow-glow);
+}
+
+.epk-submit {
+    margin-top: var(--space-sm);
+    font-size: 14px;
+    padding: 14px;
+    width: auto;
+    align-self: flex-start;
+}
+
+/* Responsive EPK */
+@media (max-width: 900px) {
+    .epk-grid, .form-row {
+        grid-template-columns: 1fr;
+    }
+}

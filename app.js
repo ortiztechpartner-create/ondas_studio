@@ -912,12 +912,36 @@ function initEventListeners() {
     
     const bookingForm = document.getElementById("bookingForm");
     if (bookingForm) {
-        bookingForm.addEventListener("submit", (e) => {
+        bookingForm.addEventListener("submit", async (e) => {
             e.preventDefault();
-            // Aquí iría el fetch a la webhook de n8n
-            console.log("Enviando datos al Webhook de n8n...");
-            alert("¡Solicitud enviada con éxito! (Simulación Webhook n8n)");
-            bookingForm.reset();
+            
+            const formData = new FormData(bookingForm);
+            const payload = {
+                nombre: formData.get("nombre"),
+                email: formData.get("email"),
+                detalles: formData.get("detalles"),
+                timestamp: new Date().toISOString()
+            };
+
+            try {
+                const response = await fetch("https://0reonomada-n8n.ikkkir.easypanel.host/webhook/ondas-booking", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
+                    alert("¡Solicitud enviada con éxito!");
+                    bookingForm.reset();
+                } else {
+                    throw new Error("Respuesta de error desde el servidor");
+                }
+            } catch (error) {
+                console.error("Error enviando datos al Webhook de n8n:", error);
+                alert("Ocurrió un error al enviar tu solicitud. Por favor, intenta de nuevo o contáctanos directamente.");
+            }
         });
     }
     
